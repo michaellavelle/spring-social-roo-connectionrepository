@@ -12,6 +12,16 @@
 		<spring.version>3.1.1.RELEASE</spring.version>
 		<spring.social.version>1.0.2.RELEASE</spring.social.version>
 	</properties>
+	<distributionManagement>
+	 	<repository>
+		<id>repo</id>
+			<url>https://github.com/OpenSourceAgility/opensourceagility-mvn-repo/raw/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>https://github.com/OpenSourceAgility/opensourceagility-mvn-repo/raw/master/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<repositories>
 		<repository>
 			<id>spring-maven-release</id>
