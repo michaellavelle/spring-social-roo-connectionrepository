@@ -6,7 +6,7 @@ as an alternative to the JDBC versions in spring-social-core.
 
 To use this implementation in your application:
 
-1. Add our snapshot repository and dependency to your project, eg. in pom.xml:
+*1 Add our snapshot repository and dependency to your project, eg. in pom.xml:
 
 ```
 
@@ -23,14 +23,15 @@ To use this implementation in your application:
 
 ```
 
-2. Component scan for the RooTemplate implementation, and the UserConnection roo-managed entity:
+*2 Component scan for the RooTemplate implementation, and the UserConnection roo-managed entity:
 
 ```
     <context:component-scan base-package="org.springframework.social.connect.roo">
         <context:exclude-filter expression=".*_Roo_.*" type="regex"/>
     </context:component-scan>
 ```
-3. Replace JdbcUsersConnectionRepository/JdbcConnectionRepository bean configurations with 
+
+*3 Replace JdbcUsersConnectionRepository/JdbcConnectionRepository bean configurations with 
 RooUsersConnectionRepository/RooConnectionRepository implementations.  
 
 The construction of these beans should only need to change in respect to the first argument of the
@@ -86,7 +87,7 @@ or in xml...
 	</bean>
 ```
 
-4.  Add <class>org.springframework.social.connect.roo.UserConnection</class> to your persistence.xml, eg:
+*4  Add <class>org.springframework.social.connect.roo.UserConnection</class> to your persistence.xml, eg:
 
 ```
         <persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
