@@ -68,6 +68,8 @@ private RooTemplate rooTemplate:
 
 or in xml...
 
+```
+
     <bean id="usersConnectionRepository"
     	class="org.springframework.social.connect.roo.RooUsersConnectionRepository">
 		<constructor-arg ref="rooUserConnectionTemplate" />
