@@ -25,10 +25,11 @@ To use this implementation in your application:
 
 2. Component scan for the RooTemplate implementation, and the UserConnection roo-managed entity:
 
+```
     <context:component-scan base-package="org.springframework.social.connect.roo">
         <context:exclude-filter expression=".*_Roo_.*" type="regex"/>
     </context:component-scan>
-
+```
 3. Replace JdbcUsersConnectionRepository/JdbcConnectionRepository bean configurations with 
 RooUsersConnectionRepository/RooConnectionRepository implementations.  
 
@@ -39,6 +40,8 @@ RooUsersConnectionRepository constructor, which must be the component-scanned Ro
 Your datasource bean will be autowired into the RooTemplate implementation instead by the component-scan.
 
 Your configuration should now resemble the following:
+
+```
 
 @Autowired 
 private RooTemplate rooTemplate:
@@ -59,7 +62,9 @@ private RooTemplate rooTemplate:
 			throw new IllegalStateException("Unable to get a ConnectionRepository: no user signed in");
 		}
 		return usersConnectionRepository().createConnectionRepository(authentication.getName());
-	}
+}
+
+```
 
 or in xml...
 
@@ -77,14 +82,18 @@ or in xml...
 		<constructor-arg value="#{request.userPrincipal.name}" />
 		<aop:scoped-proxy proxy-target-class="true" />
 	</bean>
+```
 
 4.  Add <class>org.springframework.social.connect.roo.UserConnection</class> to your persistence.xml, eg:
 
+```
         <persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
             <provider>org.hibernate.ejb.HibernatePersistence</provider>
             <class>org.springframework.social.connect.roo.UserConnection</class>
         <properties>
             ....
+
+```
 
 With this configuration, there is no need to create the user connection table, as Roo will take care of
 ORM for the UserConnection entity, which you can now use amongst any other persistent classes in your application.
