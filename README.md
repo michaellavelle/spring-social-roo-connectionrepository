@@ -101,5 +101,9 @@ or in xml...
 With this configuration, there is no need to create the user connection table, as Roo will take care of
 ORM for the UserConnection entity, which you can now use amongst any other persistent classes in your application.
 
+This implementation contains an associated Test class for the repositories which subclasses AbstractUsersConnectionRepositoryTest
+from https://github.com/michaellavelle/spring-social-core-extension.   This applies the same suite of tests to the
+repositories as for the JDBC version from spring-core
+
 
 
