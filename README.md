@@ -1,5 +1,3 @@
-spring-social-roo-connectionrepository
-======================================
 
 spring-social-roo-connectionrepository
 ======================================
