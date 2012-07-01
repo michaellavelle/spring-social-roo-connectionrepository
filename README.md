@@ -8,7 +8,7 @@ To use this implementation in your application:
 
 1. Add our snapshot repository and dependency to your project, eg. in pom.xml:
 
-<code>
+```
 
 <repository>
     <id>opensourceagility-snapshots</id>
@@ -21,7 +21,7 @@ To use this implementation in your application:
 	    <version>1.0.2-SNAPSHOT</version>
 </dependency>
 
-</code>
+```
 
 2. Component scan for the RooTemplate implementation, and the UserConnection roo-managed entity:
 
