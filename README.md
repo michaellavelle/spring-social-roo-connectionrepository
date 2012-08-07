@@ -2,7 +2,8 @@ spring-social-roo-connectionrepository
 ======================================
 
 A UsersConnectionRepository/ConnectionRepository implementation using Roo managed entities for persistence
-as an alternative to the JDBC versions in spring-social-core.
+as an alternative to the JDBC versions in spring-social-core.  You can see this implementation in action in the 
+SocialSignin Roo Showcase -> https://github.com/socialsignin/socialsignin-roo-showcase
 
 To use this implementation in your application:
 
