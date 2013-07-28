@@ -4,13 +4,15 @@
 	<groupId>org.springframework.social</groupId>
 	<artifactId>spring-social-roo-connectionrepository</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<name>Spring Social Roo ConnectionRepository plugin</name>
 	<properties>
 		<roo.version>1.2.2.RELEASE</roo.version>
 		<aspectj.version>1.6.11</aspectj.version>
-		<spring.version>3.1.1.RELEASE</spring.version>
-		<spring.social.version>1.0.2.RELEASE</spring.social.version>
+		<spring.version>3.2.3.RELEASE</spring.version>
+		<spring.social.version>1.1.0.M3</spring.social.version>
+		<spring.social-config-extension.version>1.1.0-SNAPSHOT</spring.social-config-extension.version>
+		
 	</properties>
 	<distributionManagement>
 	 	<repository>
@@ -23,6 +25,11 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<repositories>
+	 	<repository>
+            <id>spring-maven-milestone</id>
+            <name>Spring Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+        </repository>	
 		<repository>
 			<id>spring-maven-release</id>
 			<name>Spring Maven Release Repository</name>
@@ -70,7 +77,12 @@
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-core-extension</artifactId>
-			<version>1.0.2-SNAPSHOT</version>
+			<version>1.1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-config-extension</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
 		</dependency>
 				<dependency>
 			<groupId>org.springframework</groupId>
