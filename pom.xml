@@ -9,10 +9,9 @@
 	<properties>
 		<roo.version>1.2.2.RELEASE</roo.version>
 		<aspectj.version>1.6.11</aspectj.version>
-		<spring.version>3.2.3.RELEASE</spring.version>
-		<spring.social.version>1.1.0.M3</spring.social.version>
-		<spring.social-config-extension.version>1.1.0-SNAPSHOT</spring.social-config-extension.version>
-		
+		<spring.version>4.0.2.RELEASE</spring.version>
+		<spring.social.version>1.1.0.RC1</spring.social.version>
+		<spring.social-core-extension.version>1.1.0-SNAPSHOT</spring.social-core-extension.version>
 	</properties>
 	<distributionManagement>
 	 	<repository>
@@ -40,11 +39,14 @@
 			<name>Spring Roo Repository</name>
 			<url>http://spring-roo-repository.springsource.org/release</url>
 		</repository>
-		<repository>
-			<id>spring-maven-milestone</id>
-			<name>Spring Maven Milestone Repository</name>
-			<url>http://maven.springframework.org/milestone</url>
-		</repository>
+		 <repository>
+        <id>spring-snapshots</id>
+        <name>Spring Snapshots</name>
+        <url>http://repo.spring.io/snapshot</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>	
 			<repository>
 	        	<id>opensourceagility-snapshots</id>
 	        	<url>http://repo.opensourceagility.com/snapshots</url>
@@ -77,7 +79,7 @@
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-core-extension</artifactId>
-			<version>1.1.0-SNAPSHOT</version>
+			<version>${spring.social-core-extension.version}</version>
 		</dependency>
 				<dependency>
 			<groupId>org.springframework</groupId>
