@@ -9,7 +9,7 @@
 	<properties>
 		<roo.version>1.2.2.RELEASE</roo.version>
 		<aspectj.version>1.6.11</aspectj.version>
-		<spring.version>4.0.2.RELEASE</spring.version>
+		<spring.version>5.2.0.RELEASE</spring.version>
 		<spring.social.version>1.1.0.RC1</spring.social.version>
 		<spring.social-core-extension.version>1.1.0-SNAPSHOT</spring.social-core-extension.version>
 	</properties>
